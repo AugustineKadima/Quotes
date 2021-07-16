@@ -1,0 +1,19 @@
+.hero{
+    background-image: url("/assets/images/lion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero p{
+    color: white;
+    background-color: rgb(20, 20, 20,0.5);
+    width: 50%;
+    font-weight: 700;
+    font-size: x-large;
+    padding: 20px;
+}
