@@ -1,8 +1,11 @@
 <div>
-    <form>
+    <form #quoteform='ngForm'>
         <div class="form-group">
             <label for="">Quote:</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Type your quote here..." class="form-control"></textarea>
+            <textarea #theQuote="ngModel" [(ngModel)]="newQuote.theQuote" name="theQuote" id="theQuote" cols="30" rows="10" placeholder="Type your quote here..." class="form-control"></textarea>
+            <div [hidden]="theQuote.valid || theQuote.pristine" class="alert alert-danger">
+                <p>Quote required</p>
+            </div>
         </div>
         <div class="form-group">
             <label for="" >Author name:</label>
