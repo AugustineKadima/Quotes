@@ -1,3 +1,7 @@
+.container-fluid{
+    margin-top: 15vh;
+}
+
 .mainSection{
     display: flex;
 }
