@@ -1,15 +1,19 @@
 
-<h4>Click on a quote to vote</h4>
+<h4>Click on vote to see voting options</h4>
 
-<div *ngFor="let quote of quotes">
+<div *ngFor="let quote of quotes; let i = index">
     
       <blockquote class="blockquote text-left">
-        <p class="mb-0">{{quote.theQuote}}</p>
-        <div>
-            <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
-            <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
-        </div>
-        <app-quote-details></app-quote-details>
+            <p class="mb-0">{{quote.theQuote}}</p>
+            <div>
+                <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+                <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
+            </div>
+
+            <p id="vote" (click)='toggleDetails(i)'>Vote</p>
+            <div *ngIf='quote.showDescription'>
+                <app-quote-details></app-quote-details>
+            </div>
       </blockquote>
    
 </div>

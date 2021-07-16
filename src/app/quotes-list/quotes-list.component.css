@@ -20,3 +20,10 @@ blockquote div{
     display: flex;
     justify-content: space-between;
 }
+
+#vote{
+    cursor: pointer;
+}
+#vote:hover{
+    color: rgb(0, 110, 255);
+}
