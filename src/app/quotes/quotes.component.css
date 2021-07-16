@@ -1,5 +1,5 @@
 .container-fluid{
-    margin-top: 15vh;
+    margin-top: 18vh;
 }
 
 .mainSection{
@@ -24,7 +24,7 @@ h2{
 .hero p{
     color: white;
     background-color: rgb(20, 20, 20,0.5);
-    width: 50%;
+    width: auto;
     font-weight: 700;
     font-size: x-large;
     padding: 20px;

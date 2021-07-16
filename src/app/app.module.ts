@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesListComponent } from './quotes-list/quotes-list.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CreateQuoteComponent } from './create-quote/create-quote.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
