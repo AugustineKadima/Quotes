@@ -8,8 +8,9 @@ import { QuoteModel } from '../quote-model';
 })
 export class QuotesListComponent implements OnInit {
 
-  quotes:QuoteModel[] = [
-    new QuoteModel(1, "Never give up", "Mohamed Ali", "Kadima")
+ quotes:QuoteModel[] = [
+    new QuoteModel(1, "Never give up", "Mohamed Ali", "Kadima"),
+    new QuoteModel(2, "Arise and shine", "Joseph", "Cleophas")
   ]
 
   constructor() { }

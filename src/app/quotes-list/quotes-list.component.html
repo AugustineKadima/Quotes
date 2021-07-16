@@ -1,5 +1,5 @@
 <h4>Quote With Highest Upvote</h4>
-<div>
-    <p>guhuhh</p>
+<div *ngFor="let quote of quotes">
+    <p>{{quote.theQuote}}</p>
     <app-quote-details></app-quote-details>
 </div>
