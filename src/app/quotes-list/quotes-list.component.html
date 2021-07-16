@@ -1,9 +1,13 @@
 <h4>Quote With Highest Upvote</h4>
+
 <div *ngFor="let quote of quotes">
-  
+    
       <blockquote class="blockquote text-left">
         <p class="mb-0">{{quote.theQuote}}</p>
-        <footer class="blockquote-footer">Quoted by: <cite title="Source Title">{{quote.author}}</cite></footer>
+        <div>
+            <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+            <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
+        </div>
       </blockquote>
     <app-quote-details></app-quote-details>
 </div>
