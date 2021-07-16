@@ -1,6 +1,11 @@
 *{
     font-size: 18px;
 }
+
+h4{
+    font-weight: 700;
+    margin-top: 10px;
+}
 #submitted{
     font-size: 14px;
     color: gray;
