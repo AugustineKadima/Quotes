@@ -13,7 +13,10 @@
     justify-content: center;
     margin-right: 0px;
 }
-
+h2{
+    font-weight: 900;
+    color: green;
+}
 .hero p{
     color: white;
     background-color: rgb(20, 20, 20,0.5);
