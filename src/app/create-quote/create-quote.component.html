@@ -1,20 +1,31 @@
 <div>
-    <form #quoteform='ngForm' (ngSubmit)="submitQuote()">
+    <form #quoteForm='ngForm' (ngSubmit)="submitQuote()">
+
         <div class="form-group">
             <label for="">Quote:</label>
-            <textarea #theQuote="ngModel" [(ngModel)]="newQuote.theQuote" name="theQuote" id="theQuote" cols="30" rows="10" placeholder="Type your quote here..." class="form-control"></textarea>
+            <textarea #theQuote="ngModel" required [(ngModel)]="newQuote.theQuote" id="theQuote" name="theQuote"  cols="30" rows="10" placeholder="Type your quote here..." class="form-control"></textarea>
             <div [hidden]="theQuote.valid || theQuote.pristine" class="alert alert-danger">
                 <p>Quote required</p>
             </div>
         </div>
+      
         <div class="form-group">
-            <label for="" >Author name:</label>
-            <input type="text" class="form-control">
+            <label for="author" >Author name:</label>
+            <input name="author" required #author="ngModel" type="text" class="form-control" [(ngModel)]="newQuote.author">
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author required</p>
+            </div>
         </div>
+
         <div class="form-group">
             <label for="">Submitted by:</label>
-            <input type="text" class="form-control">
+            <input #submittedBy="ngModel" required [(ngModel)]="newQuote.submittedBy" name="submittedBy" type="text" class="form-control">
+            <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
+                <p>Your name required</p>
+            </div>
         </div>
-        <button class="btn btn-primary">Create</button>
+        
+        <button type="submit" class="btn btn-primary">Create</button>
+
     </form>
 </div>

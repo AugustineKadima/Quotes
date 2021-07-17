@@ -8,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesListComponent } from './quotes-list/quotes-list.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
+import { QuotesService } from './quotes.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { CreateQuoteComponent } from './create-quote/create-quote.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [QuotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

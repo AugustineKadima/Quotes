@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteModel } from '../quote-model';
+import { QuotesService } from '../quotes.service';
 
 @Component({
   selector: 'app-quotes',
@@ -8,6 +9,8 @@ import { QuoteModel } from '../quote-model';
 })
 export class QuotesComponent implements OnInit {
 
+  quotes:QuoteModel[] = []
+  
   addNewQuote(quote:QuoteModel){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
@@ -15,9 +18,15 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  constructor() { }
+   
+
+  constructor(private quotesService:QuotesService) { 
+    
+  }
 
   ngOnInit(): void {
+    this.quotes = this.quotesService.getQuotes()
+    console.log(this.quotes)
   }
 
 }
