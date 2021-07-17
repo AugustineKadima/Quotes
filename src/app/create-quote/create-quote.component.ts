@@ -8,7 +8,7 @@ import { QuoteModel } from '../quote-model';
 })
 export class CreateQuoteComponent implements OnInit {
 
-  newQuote = new QuoteModel(0 ,"","", "", new Date())
+  newQuote = new QuoteModel(0 ,"","", "", new Date(), 0, 0)
   @Output()  addQuote = new EventEmitter<QuoteModel>()
 
   submitQuote(){

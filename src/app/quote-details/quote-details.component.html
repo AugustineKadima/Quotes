@@ -1,5 +1,5 @@
 <div>
-    <p>This quote has been online: {{quote.completeDate | dateCount}} days</p>
+    <p>This quote has been online: <strong>{{quote.completeDate | dateCount}}</strong>  days</p>
     <button class="btn btn-primary">Upvote</button>
     <button class="btn btn-warning">DownVote</button>
     <button (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete</button>

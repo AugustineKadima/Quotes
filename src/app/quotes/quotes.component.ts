@@ -8,7 +8,7 @@ import { QuotesService } from '../quotes.service';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-
+  
   quotes:QuoteModel[] = []
   
   addNewQuote(quote:QuoteModel){
@@ -18,9 +18,17 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote)
   }
 
- 
+
   toggleDetails(index:number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  upVote(index:number){
+    this.quotes[index].UpVote += 1
+  }
+
+  downVote(index:number){
+    this.quotes[index].DownVote -= 1
   }
 
   deleteQuote(emittedEvent: any, index: number){
@@ -38,7 +46,6 @@ export class QuotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.quotes = this.quotesService.getQuotes()
-    console.log(this.quotes)
   }
 
 }
