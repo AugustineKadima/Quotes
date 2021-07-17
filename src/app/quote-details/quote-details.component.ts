@@ -14,6 +14,14 @@ export class QuoteDetailsComponent implements OnInit {
     this.emmitedEvent.emit(boolVal);
  }
 
+ upVote(){
+  this.quote.UpVote += 1
+}
+
+downVote(){
+  this.quote.DownVote -= 1
+}
+
   constructor() { }
 
   ngOnInit(): void {

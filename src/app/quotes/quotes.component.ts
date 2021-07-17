@@ -23,13 +23,7 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  upVote(index:number){
-    this.quotes[index].UpVote += 1
-  }
-
-  downVote(index:number){
-    this.quotes[index].DownVote -= 1
-  }
+ 
 
   deleteQuote(emittedEvent: any, index: number){
     if (emittedEvent) {
