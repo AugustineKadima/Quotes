@@ -1,5 +1,6 @@
 export class QuoteModel {
     showDescription:boolean
+    vote:number 
     constructor(
         public id:number, 
         public theQuote:string, 
@@ -9,5 +10,6 @@ export class QuoteModel {
         ){
 
         this.showDescription = false
+        this.vote = 0
     }
 }
