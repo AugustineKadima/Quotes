@@ -1,5 +1,5 @@
 <div>
-    <form #quoteform='ngForm'>
+    <form #quoteform='ngForm' (ngSubmit)="submitQuote()">
         <div class="form-group">
             <label for="">Quote:</label>
             <textarea #theQuote="ngModel" [(ngModel)]="newQuote.theQuote" name="theQuote" id="theQuote" cols="30" rows="10" placeholder="Type your quote here..." class="form-control"></textarea>

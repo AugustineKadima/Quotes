@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { QuoteModel } from '../quote-model';
 
 @Component({
@@ -9,6 +9,11 @@ import { QuoteModel } from '../quote-model';
 export class CreateQuoteComponent implements OnInit {
 
   newQuote = new QuoteModel(0 ,"","", "")
+  @Output()  addQuote = new EventEmitter<QuoteModel>()
+
+  submitQuote(){
+    this.addQuote.emit(this.newQuote)
+  }
   constructor() { }
 
   ngOnInit(): void {
