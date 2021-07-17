@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="fullPage container-fluid">
     <div class="mainSection">
-        <div class="topImgForm col col-md-6">
+        <div class="topImgForm col ">
             <div class="hero " >
                 <p>Create, Upvote <br> or Downvote <br> Motivational Quotes</p>
             </div>
@@ -10,10 +10,36 @@
             </div>
         </div>
        
-        <div class="col col-md-6">
-            <h2>Quotes</h2>
-            <app-quotes-list ></app-quotes-list>
-        </div>
+     
     </div>
+
+    <!-- Quotes List -->
+    <div class="topImgForm col">
+        <h2>Quotes</h2>
+        <h4>Click on details to see more details or vote or delete</h4>
+
+        <div *ngFor="let quote of quotes; let i = index">
+            
+            <blockquote class="blockquote text-left">
+                    <p class="mb-0">{{quote.theQuote}}</p>
+                
+                    <p id="vote" (click)='toggleDetails(i)'>Details</p>
+                    <div *ngIf='quote.showDescription'>
+                        
+                        <div class="blockElement">
+                            <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+                            <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
+                        </div>
+
+                        <app-quote-details (emittedEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details>
+                        
+                    </div>
+            </blockquote>
+        
+        </div>
+
+    </div>
+
+    
     
 </div>

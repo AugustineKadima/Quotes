@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { QuotesListComponent } from './quotes-list/quotes-list.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
 import { QuotesService } from './quotes.service';
@@ -16,7 +15,6 @@ import { DateCountPipe } from './date-count.pipe';
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuotesListComponent,
     QuoteDetailsComponent,
     CreateQuoteComponent,
     DateCountPipe
