@@ -22,6 +22,15 @@ export class QuotesListComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
+  deleteQuote(emittedEvent: any, index: number){
+    if (emittedEvent) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].theQuote}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
   constructor(private quotesService:QuotesService) { 
    
   }

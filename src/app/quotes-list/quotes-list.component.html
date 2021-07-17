@@ -8,11 +8,14 @@
           
             <p id="vote" (click)='toggleDetails(i)'>Details</p>
             <div *ngIf='quote.showDescription'>
+                
                 <div class="blockElement">
                     <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
                     <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
                 </div>
-                <app-quote-details ></app-quote-details>
+
+                <app-quote-details (emittedEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details>
+                 
             </div>
       </blockquote>
    

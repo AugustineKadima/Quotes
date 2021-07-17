@@ -9,6 +9,7 @@ import { QuotesListComponent } from './quotes-list/quotes-list.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
 import { QuotesService } from './quotes.service';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { QuotesService } from './quotes.service';
     QuotesComponent,
     QuotesListComponent,
     QuoteDetailsComponent,
-    CreateQuoteComponent
+    CreateQuoteComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
