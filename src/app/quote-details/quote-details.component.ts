@@ -7,20 +7,25 @@ import { QuoteModel } from '../quote-model';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+
  @Input() quote!:QuoteModel
  @Output() emmitedEvent = new EventEmitter<boolean>()
+
+ maxUpvote = 0
 
  quoteDelete(boolVal:boolean){
     this.emmitedEvent.emit(boolVal);
  }
 
- upVote(){
-  this.quote.UpVote += 1
-}
+  upVote(){
+    this.quote.UpVote += 1
+  }
 
-downVote(){
-  this.quote.DownVote -= 1
-}
+  downVote(){
+    this.quote.DownVote += 1
+  }
+
+
 
   constructor() { }
 

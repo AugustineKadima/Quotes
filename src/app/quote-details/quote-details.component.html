@@ -1,8 +1,22 @@
-<div>
-    <p>UpVotes: <strong>{{quote.UpVote}}</strong> </p>
-    <p>DownVotes: <strong>{{quote.DownVote}}</strong> </p>
-    <p>This quote has been online: <strong>{{quote.completeDate | dateCount}}</strong>  days</p>
-    <button class="btn btn-primary" (click)="upVote()">Upvote</button>
-    <button class="btn btn-warning" (click)="downVote()">DownVote</button>
-    <button (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete</button>
+
+
+
+<p>Time elapsed since quote creation. : <strong>{{quote.completeDate | dateCount}}</strong>  days</p>
+<div class="details">
+    
+    <div class="voting">
+        <div >
+            <button class="btn btn-primary" (click)="upVote()">Upvote</button>
+            <small>UpVotes: <strong>{{quote.UpVote}}   </strong> </small> 
+        </div>
+        <div class="down">
+            <button class="btn btn-warning" (click)="downVote()">DownVote</button>
+            <small>DownVotes: <strong>{{quote.DownVote}}</strong> </small> 
+        </div>
+    </div>
+    
+    <div>
+        <button id="del" (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete</button>
+    </div>
+   
 </div>

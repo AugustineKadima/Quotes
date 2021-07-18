@@ -1,3 +1,22 @@
 button{
     margin-right: 20px;
 }
+
+.details{
+    display: flex;
+    
+}
+
+.voting{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.down{
+    margin-left: 20px;
+}
+
+#del{
+    margin-left: 20px;
+}
