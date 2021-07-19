@@ -1,3 +1,4 @@
+
 <div class="fullPage container-fluid">
     <div class="mainSection">
         <div class="topImgForm col ">
@@ -30,12 +31,26 @@
                             <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
                             <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
                         </div>
-                       
-                        <app-quote-details (emittedEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details>
+                        
+                        <div class="voting">
+                            <div >
+                                <button class="btn btn-primary" (click)="upVote(i)">Upvote</button>
+                                <small>UpVotes: <strong>{{quote.UpVote}}   </strong> </small> 
+                            </div>
+                            <div class="down">
+                                <button class="btn btn-warning" (click)="downVote(i)">DownVote</button>
+                                <small>DownVotes: <strong>{{quote.DownVote}}</strong> </small> 
+                            </div>
+                        </div>
+                        <app-quote-details (deleteEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details>
                         
                     </div>
                    
             </blockquote>
+
+            <div *ngIf="maxUpvoteNumber > 0" style="background-color:green">
+
+            </div>
         
         </div>
 

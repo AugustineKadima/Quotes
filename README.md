@@ -5,7 +5,7 @@
 This website allows you to create quotes, add the author names and the name of the person submitting. You can view quotes from other people and upvote or downvote or delete. 
 ## Setup/Installation Requirements
 * Open your browser and navigate to the search input
-* Type the following address in the search bar 
+* Type the following address in the search bar https://augustinekadima.github.io/Quotes/
 * Press enter
 * Fill the form on the website to create a quote
 * Click on details to see more quote details

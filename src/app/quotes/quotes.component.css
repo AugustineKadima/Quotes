@@ -1,3 +1,7 @@
+*{
+    font-size: 18px;
+}
+
 .container-fluid{
     margin-top: 18vh;
 }
@@ -37,9 +41,6 @@ h2{
     margin-top: 20px;
 }
 
-*{
-    font-size: 18px;
-}
 
 h4{
     font-weight: 700;
@@ -71,4 +72,22 @@ blockquote .blockElement{
 
 .fullPage{
     display: flex;
+}
+button{
+    margin-right: 20px;
+}
+
+.details{
+    display: flex;
+    
+}
+
+.voting{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.down{
+    margin-left: 20px;
 }

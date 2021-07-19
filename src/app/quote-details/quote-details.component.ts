@@ -9,21 +9,14 @@ import { QuoteModel } from '../quote-model';
 export class QuoteDetailsComponent implements OnInit {
 
  @Input() quote!:QuoteModel
- @Output() emmitedEvent = new EventEmitter<boolean>()
+ @Output() deleteEvent = new EventEmitter<boolean>()
 
- maxUpvote = 0
+
 
  quoteDelete(boolVal:boolean){
-    this.emmitedEvent.emit(boolVal);
+    this.deleteEvent.emit(boolVal);
  }
 
-  upVote(){
-    this.quote.UpVote += 1
-  }
-
-  downVote(){
-    this.quote.DownVote += 1
-  }
 
 
 
