@@ -23,9 +23,10 @@
         <h2>Quotes</h2>
         <h4>Click on details to see more details or vote or delete</h4>
 
-        <div *ngFor="let quote of quotes; let i = index">
+        <div *ngFor="let quote of quotes; let i = index"  >
+
             
-            <blockquote class="blockquote text-left">
+            <blockquote appHighestUpvote  class="blockquote text-left">
                     <p class="mb-0">{{quote.theQuote}}</p>
                 
                     <p id="vote" (click)='toggleDetails(i)'>Details</p>
@@ -51,25 +52,6 @@
                     </div>
                    
             </blockquote>
-
-            <div *ngIf="maxUpvoteNumber > 0" style="background-color:green">
-                <!-- <div class="blockElement">
-                    <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
-                    <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
-                </div>
-                
-                <div class="voting">
-                    <div >
-                        <button class="btn btn-primary" (click)="upVote(i)">Upvote</button>
-                        <small>UpVotes: <strong>{{quote.UpVote}}   </strong> </small> 
-                    </div>
-                    <div class="down">
-                        <button class="btn btn-warning" (click)="downVote(i)">DownVote</button>
-                        <small>DownVotes: <strong>{{quote.DownVote}}</strong> </small> 
-                    </div>
-                </div>
-                <app-quote-details (deleteEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details> -->
-            </div>
         
         </div>
 

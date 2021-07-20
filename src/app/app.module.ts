@@ -9,6 +9,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CreateQuoteComponent } from './create-quote/create-quote.component';
 import { QuotesService } from './quotes.service';
 import { DateCountPipe } from './date-count.pipe';
+import { HighestUpvoteDirective } from './directives/highest-upvote.directive';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DateCountPipe } from './date-count.pipe';
     QuotesComponent,
     QuoteDetailsComponent,
     CreateQuoteComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighestUpvoteDirective
   ],
   imports: [
     BrowserModule,

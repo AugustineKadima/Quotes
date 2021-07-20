@@ -9,7 +9,7 @@ import { QuotesService } from '../quotes.service';
 })
 export class QuotesComponent implements OnInit {
   
-  maxUpvoteNumber = 0
+ 
   quotes:QuoteModel[] = []
   
   addNewQuote(quote:QuoteModel){
@@ -27,7 +27,6 @@ export class QuotesComponent implements OnInit {
 
   upVote(index:number){
     this.quotes[index].UpVote += 1
-    this.maxUpvoteNumber = Math.max.apply(Math, this.quotes.map(function(votes) { return votes.UpVote; }));
     
   }
 
