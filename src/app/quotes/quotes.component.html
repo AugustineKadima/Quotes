@@ -3,7 +3,11 @@
     <div class="mainSection">
         <div class="topImgForm col ">
             <div class="hero" >
-                <p>Create, Upvote <br> or Downvote <br> Motivational Quotes</p>
+                <img src="/assets/images/lion2.jpeg" alt="lion-img">
+                <div class="heroContent">
+                    <p>Create, Upvote <br> or Downvote <br> Motivational Quotes</p>
+                </div>
+              
             </div>
             <div class="leadTxt">
                 <h2>Create Quote</h2>
@@ -49,7 +53,22 @@
             </blockquote>
 
             <div *ngIf="maxUpvoteNumber > 0" style="background-color:green">
-
+                <!-- <div class="blockElement">
+                    <footer class="blockquote-footer">Author: <cite title="Source Title">{{quote.author}}</cite></footer>
+                    <cite><p id="submitted">Submitted by: {{quote.submittedBy}}</p></cite>
+                </div>
+                
+                <div class="voting">
+                    <div >
+                        <button class="btn btn-primary" (click)="upVote(i)">Upvote</button>
+                        <small>UpVotes: <strong>{{quote.UpVote}}   </strong> </small> 
+                    </div>
+                    <div class="down">
+                        <button class="btn btn-warning" (click)="downVote(i)">DownVote</button>
+                        <small>DownVotes: <strong>{{quote.DownVote}}</strong> </small> 
+                    </div>
+                </div>
+                <app-quote-details (deleteEvent)="deleteQuote($event, i)" [quote]="quote" ></app-quote-details> -->
             </div>
         
         </div>
