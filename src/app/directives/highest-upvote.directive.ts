@@ -9,7 +9,7 @@ export class HighestUpvoteDirective {
 
   constructor(private elem:ElementRef) {
  
-    this.elem.nativeElement.style.boxShadow = "0px 0px 10px green"
+    this.elem.nativeElement.style.boxShadow = "0px 0px 10px gray"
    }
 
   
